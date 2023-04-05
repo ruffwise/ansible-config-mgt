@@ -7,12 +7,12 @@
   tasks:
     - name: Creating the directory
       file:
-        path: ~/Text-files
+        path: /home/ec2-user/Text-files
         state: directory
 
     - name: Creating the text file
       file:
-        path: ~/Text-files/Testing.txt
+        path: /home/ec2-user/Text-files/Testing.txt
         state: touch
 
 - name: Create text files on ubuntu servers
@@ -23,9 +23,9 @@
   tasks:
     - name: Creating the directory
       file:
-        path: ~/Text-files
+        path: /home/ubuntu/text-files
         state: directory
     - name: creating the text files
       file:
-        path: ~/text-files/testing.txt
+        path: /home/ubuntu/text-files/testing.txt
         state: touch
