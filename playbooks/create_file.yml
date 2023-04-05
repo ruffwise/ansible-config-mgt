@@ -1,0 +1,22 @@
+---
+- name: Create sample text files on RHEL servers
+  hosts: webservers, nfs
+  remote_user: ec2-user
+  become: yes
+  become_user: root
+  tasks:
+    - name: Creating the text file
+      file:
+        path: ~/Text-files/Testing.txt
+        state: touch
+
+- name: Create text files on ubuntu servers
+  hosts: lb, db
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+    - name: creating the text files
+      file:
+        path: ~/text-files/testing.txt
+        state: touch
