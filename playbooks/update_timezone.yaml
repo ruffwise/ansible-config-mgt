@@ -1,0 +1,20 @@
+---
+- name: Update timezone on RHEL servers
+  hosts: webservers, nfs
+  remote_user: ec2-user
+  become: yes
+  become_user: root
+  tasks:
+    - name: changing the time-zone
+      timezone:
+        name: Africa/Lagos
+
+- name: Updae timezone on Ubuntu servers
+  hosts: lb, db
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+    - name: Changing timezone
+      timezone:
+        name: Africa/Lagos
