@@ -5,6 +5,11 @@
   become: yes
   become_user: root
   tasks:
+    - name: Creating the directory
+      file:
+        path: ~/Text-files
+        state: directory
+
     - name: Creating the text file
       file:
         path: ~/Text-files/Testing.txt
@@ -16,6 +21,10 @@
   become: yes
   become_user: root
   tasks:
+    - name: Creating the directory
+      file:
+        path: ~/Text-files
+        state: directory
     - name: creating the text files
       file:
         path: ~/text-files/testing.txt
