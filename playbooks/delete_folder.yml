@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  gather_facts: true
+  tasks:
+    - name: Delete default.CONTROL-OFFICE Profile folder
+      community.windows.win_user_profile:
+        name: default.CONTROL-OFFICE
+        state: absent
