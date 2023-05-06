@@ -1,9 +1,0 @@
-[servers]
-172.20.90.82
-
-[windows:vars]
-ansible_user=atb@leadway.com.ng
-ansible_password=PasswordRandom1234
-ansible_port=5986
-ansible_connection=winrm
-ansible_winrm_server_cert_validation=ignore
