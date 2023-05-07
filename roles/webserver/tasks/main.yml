@@ -1,9 +1,9 @@
 ---
 - name: install apache
-become: true
-ansible.builtin.yum:
-  name: "httpd"
-  state: present
+  become: true
+  ansible.builtin.yum:
+    name: "httpd"
+    state: present
 
 - name: install git
   become: true
